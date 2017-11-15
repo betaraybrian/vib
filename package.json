@@ -1,0 +1,26 @@
+{
+  "name": "multimodal",
+  "version": "1.0.0",
+  "description": "Flexsensors and vibration",
+  "main": "flex.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/betaraybrian/flex.git"
+  },
+  "keywords": [
+    "hentai"
+  ],
+  "author": "troels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betaraybrian/flex/issues"
+  },
+  "homepage": "https://github.com/betaraybrian/flex#readme",
+  "dependencies": {
+    "mcp-spi-adc": "^1.0.0",
+    "rpio": "^0.9.19"
+  }
+}
