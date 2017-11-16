@@ -1,3 +1,4 @@
+module.exports = {
 var rpio = require('rpio');
 
 var pin = 12;           /* P12/GPIO18 */
@@ -20,7 +21,7 @@ function sleep(milliseconds){
 	}
 }
 
-function play10(){
+play: function play10(){
 /*
  * Enable PWM on the chosen pin and set the clock and range.
  */
@@ -70,4 +71,4 @@ else{
         }
 
         data += direction;}
-}, interval, data, direction, times);}
+}, interval, data, direction, times);}}

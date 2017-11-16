@@ -1,3 +1,4 @@
+module.exports = {
 var rpio = require('rpio');
 
 var pin = 12;           /* P12/GPIO18 */
@@ -8,7 +9,7 @@ var interval = 2;       /* setInterval timer, speed of pulses */
 var times = 2;          /* How many times to pulse before exiting */
 
 
-function play3(){
+play: function play3(){
 /*
  * Enable PWM on the chosen pin and set the clock and range.
  */
@@ -37,4 +38,5 @@ var pulse = setInterval(function() {
 
         data += direction;
 }, interval, data, direction, times);
+}
 }

@@ -1,4 +1,5 @@
-	var rpio = require('rpio');
+module.exports = {
+var rpio = require('rpio');
 
 var pin = 12;           /* P12/GPIO18 */
 var range = 1024;       /* LEDs can quickly hit max brightness, so only use */
@@ -20,7 +21,7 @@ function sleep(milliseconds){
 	}
 }
 
-function play22(){
+play: function play22(){
 
 /*
  * Enable PWM on the chosen pin and set the clock and range.
@@ -48,4 +49,4 @@ var pulse = setInterval(function() {
                         clearInterval(pulse);
                         rpio.open(pin, rpio.INPUT);
                         return;
-}, interval, data, direction, times);}
+}, interval, data, direction, times);}}
