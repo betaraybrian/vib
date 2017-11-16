@@ -20,7 +20,7 @@ function sleep(milliseconds){
 		}
 	}
 }
-function play(){
+function play24(){
 /*
  * Enable PWM on the chosen pin and set the clock and range.
  */

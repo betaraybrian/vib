@@ -21,7 +21,7 @@ function sleep(milliseconds){
 	}
 }
 
-function play(){
+function play19(){
 /*
  * Enable PWM on the chosen pin and set the clock and range.
  */
@@ -42,6 +42,6 @@ var pulse = setInterval(function() {
                         clearInterval(pulse);
                         rpio.open(pin, rpio.INPUT);
                         return;
-	
-	
+
+
 }, interval, data, direction, times);}

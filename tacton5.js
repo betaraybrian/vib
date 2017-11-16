@@ -25,7 +25,7 @@ function sleep(milliseconds){
 /*
  * Repeatedly pulse from low to high and back again until times runs out.
  */
-function play(){
+function play5(){
 /*
  * Enable PWM on the chosen pin and set the clock and range.
  */

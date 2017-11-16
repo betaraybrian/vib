@@ -21,7 +21,7 @@ function sleep(milliseconds){
 	}
 }
 
-function play(){
+function play20(){
 
 /*
  * Enable PWM on the chosen pin and set the clock and range.
@@ -61,7 +61,7 @@ var pulse = setInterval(function() {
 	}
 
 
-        
+
         data += direction;
-	
+
 }, interval, data, direction, times);}

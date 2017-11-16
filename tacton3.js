@@ -6,7 +6,9 @@ var max = 800;          /*   the bottom 8th of a larger scale */
 var clockdiv = 8;       /* Clock divider (PWM refresh rate), 8 == 2.4MHz */
 var interval = 2;       /* setInterval timer, speed of pulses */
 var times = 2;          /* How many times to pulse before exiting */
-function play(){
+
+
+function play3(){
 /*
  * Enable PWM on the chosen pin and set the clock and range.
  */
