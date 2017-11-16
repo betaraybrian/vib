@@ -97,7 +97,8 @@ function playTacton(isReplay){
     console.log("Playing tacton: "+(indexList[index] +1));
     //document.getElementById('title').innerHTML = "Playing tacton: "+(indexList[index] +1);
   }
-
+  console.log(index);
+  console.log(indexList[index]);
   tactonList[ indexList[index] ]();
 }
 
@@ -111,6 +112,7 @@ process.stdin.on('keypress', function (ch, key) {
 
   if(key && key.name == 'space'){
     console.log("space!");
+    index++;
     playTacton(false);
   }
 
