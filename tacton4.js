@@ -7,12 +7,6 @@ var clockdiv = 8;       /* Clock divider (PWM refresh rate), 8 == 2.4MHz */
 var interval = 2;       /* setInterval timer, speed of pulses */
 var times = 5;          /* How many times to pulse before exiting */
 
-/*
- * Enable PWM on the chosen pin and set the clock and range.
- */
-rpio.open(pin, rpio.PWM);
-rpio.pwmSetClockDivider(clockdiv);
-rpio.pwmSetRange(pin, range);
 
 
 /*
@@ -26,6 +20,13 @@ function sleep(milliseconds){
 		}
 	}
 }
+function play(){
+/*
+ * Enable PWM on the chosen pin and set the clock and range.
+ */
+rpio.open(pin, rpio.PWM);
+rpio.pwmSetClockDivider(clockdiv);
+rpio.pwmSetRange(pin, range);
 
 
 /*
@@ -50,3 +51,4 @@ var pulse = setInterval(function() {
 
         data += direction;
 }, interval, data, direction, times);
+}
