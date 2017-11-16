@@ -116,7 +116,7 @@ process.stdin.on('keypress', function (ch, key) {
     playTacton(false);
   }
 
-  if(key && key.name == 'enter'){
+  if(key && key.name == 'return'){
     console.log("space!");
     playTacton(true);
   }
