@@ -115,30 +115,107 @@ function initGestureList(){
     indexList[i] = i;
   }
 
-  tactonList[0] = function(){  t1.play(); };
-  tactonList[1] = function(){  t2.play(); };
-  tactonList[2] = function(){  t3.play(); };
-  tactonList[3] = function(){  t4.play(); };
-  tactonList[4] = function(){  t5.play(); };
-  tactonList[5] = function(){  t6.play(); };
-  tactonList[6] = function(){  t7.play(); };
-  tactonList[7] = function(){  t8.play(); };
-  tactonList[8] = function(){  t9.play(); };
-  tactonList[9] = function(){  t10.play(); };
-  tactonList[10] = function(){  t11.play(); };
-  tactonList[11] = function(){  t12.play(); };
-  tactonList[12] = function(){  t13.play(); };
-  tactonList[13] = function(){  t14.play(); };
-  tactonList[14] = function(){  t15.play(); };
-  tactonList[15] = function(){  t16.play(); };
-  tactonList[16] = function(){  t17.play(); };
-  tactonList[17] = function(){  t18.play(); };
-  tactonList[18] = function(){  t19.play(); };
-  tactonList[19] = function(){  t20.play(); };
-  tactonList[20] = function(){  t21.play(); };
-  tactonList[21] = function(){  t22.play(); };
-  tactonList[22] = function(){  t23.play(); };
-  tactonList[23] = function(){  t24.play(); };
+  let index = 0;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 1, play:function(){  t1.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 2, play:function(){  t2.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 3, play:function(){  t3.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 4, play:function(){  t4.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 5, play:function(){  t5.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 6, play:function(){  t6.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 7, play:function(){  t7.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 8, play:function(){  t8.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 9, play:function(){  t9.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 10, play:function(){  t10.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 11, play:function(){  t11.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 12, play:function(){  t12.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 13, play:function(){  t13.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 14, play:function(){  t14.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 15, play:function(){  t15.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 16, play:function(){  t16.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 17, play:function(){  t17.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 18, play:function(){  t18.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 19, play:function(){  t19.play(); }};
+
+  }
+  index += 4;
+  for(let i = 0; i < 5; i++){
+    tactonList[index + i] = {index: 20, play:function(){  t20.play(); }};
+
+  }
+  index += 4;
 
   for(let i = indexList.length-1; i >= 1; i--){
     let j = Math.floor( (Math.random() * i) );
@@ -168,15 +245,14 @@ document.body.onkeyup = function(e){
 
 function playTacton(isReplay){
   if(isReplay){
-    console.log("Replaying tacton: "+(indexList[index] +1));
+    console.log("Replaying tacton: "+(indexList[index].index));
     //document.getElementById('title').innerHTML =  "Replaying tacton: "+(indexList[index] +1);
   }else{
-    console.log("Playing tacton: "+(indexList[index] +1));
+    console.log("Playing tacton: "+(indexList[index].index));
     //document.getElementById('title').innerHTML = "Playing tacton: "+(indexList[index] +1);
   }
-  console.log(index);
-  console.log(indexList[index]);
-  tactonList[ indexList[index] ]();
+  
+  tactonList[ indexList[index] ].play();
 }
 
 
