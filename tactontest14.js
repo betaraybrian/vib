@@ -35,10 +35,26 @@ rpio.pwmSetRange(pin, range);
 /*
  * Repeatedly pulse from low to high and back again until times runs out.
  */
-
-        rpio.pwmSetData(pin, 444);
-     
+var direction = 1;
+var data = 0;
+var pulse = setInterval(function() {
+        rpio.pwmSetData(pin, data);
+        if (data > max ) {
+                if (times-- === 0) {
+			rpio.pwmSetData(pin, 0);
+                        clearInterval(pulse);
+                        rpio.open(pin, rpio.INPUT);
+                        return;
+                }
+	direction = 1;
+	data = 0;
+	rpio.pwmSetData(pin, data);
         sleep(500);
-rpio.pwmSetData(pin, 0);
+	}
+        data += direction;
+	if(data > (max/2)){
+	direction = 3;
+	}
+}, interval, data, direction, times);
 }
 play1();

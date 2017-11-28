@@ -23,6 +23,7 @@
     "express": "^4.16.2",
     "keypress": "^0.2.1",
     "mcp-spi-adc": "^1.0.0",
+    "pulsesensor": "0.0.1",
     "rpio": "^0.9.19"
   }
 }
