@@ -147,10 +147,12 @@ document.body.onkeyup = function(e){
 }*/
 
 function playStart(){
+  console.log("start");
   t13.play();
 }
 
 function playStop(){
+  console.log("stop");
   t5.play();
 }
 
@@ -198,6 +200,8 @@ function setupFirebaseListeners(){
   });
 
 }
+
+setup();
 
 keypress(process.stdin);
 
