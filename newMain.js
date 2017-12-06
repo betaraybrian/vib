@@ -193,11 +193,11 @@ function setupFirebaseListeners(){
     if(snapshot.val()){
       if(snapshot.val().gesture == "start"){
         console.log("start tacton here ");
-       // playStart();
+        playStart();
       }
       if(snapshot.val().gesture == "stop"){
         console.log("stop tacton here ");
-        //playStop();
+      /playStop();
       }
     }
   });
