@@ -1,4 +1,4 @@
-let firebase = require("firebase");
+var firebase = require("firebase");
 var keypress = require('keypress');
 
 var t5 = require('./tacton5');
@@ -170,6 +170,7 @@ function playTacton(isReplay){
 
 
 function setup(){
+  console.log("Starting firebase setup");
   let config = {
     apiKey: "AIzaSyADmzdnO0lNOONCJ2nL9SPN2JB9OtJb8Y0",
     authDomain: "multimodal-2f37a.firebaseapp.com",
@@ -228,4 +229,5 @@ process.stdin.on('keypress', function (ch, key) {
 
 process.stdin.setRawMode(true);
 process.stdin.resume();
+console.log("Please sig du ser det her troels..");
 setup();
