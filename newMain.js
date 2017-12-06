@@ -191,23 +191,23 @@ function setupFirebaseListeners(){
   ref.on('value', function(snapshot){
     if(snapshot.val()){
       if(snapshot.val() == "start"){
-        playStart();
+        console.log("start tacton here ");
+       // playStart();
       }
       if(snapshot.val() == "stop"){
-        playStop();
+        console.log("stop tacton here ");
+        //playStop();
       }
     }
   });
 
 }
 
-setup();
-
 keypress(process.stdin);
 
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key) {
-  console.log('got "keypress"', key);
+  //console.log('got "keypress"', key);
 
   if(key && key.name == 'space'){
     console.log("space!");
@@ -222,8 +222,10 @@ process.stdin.on('keypress', function (ch, key) {
 
   if (key && key.ctrl && key.name == 'c') {
     process.stdin.pause();
+    process.exit();
   }
 });
 
 process.stdin.setRawMode(true);
 process.stdin.resume();
+setup();
