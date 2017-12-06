@@ -1,3 +1,4 @@
+let firebase = require("firebase");
 var keypress = require('keypress');
 
 var t5 = require('./tacton5');
@@ -176,12 +177,13 @@ function setup(){
     messagingSenderId: "23867613841"
   };
   firebase.initializeApp(config);
+  setupFirebaseListeners();
 }
 
 
 // Setup listeners for database values
 function setupFirebaseListeners(){
-  let otherPerson = (person === 1)? 2: 1;
+  let otherPerson = 2;
   let ref = firebase.database().ref(otherPerson+"/gesture");
 
   ref.on('value', function(snapshot){
