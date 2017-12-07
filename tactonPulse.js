@@ -57,7 +57,7 @@ function start(){
 	rpio.pwmSetClockDivider(clockdiv);
 	rpio.pwmSetRange(pin, range);
 
-	pulseTimeout = setTimeout(pulse, sleepTime);
+	pulseTimeout = setTimeout(function(){pulse();}, sleepTime);
 
 }
 
@@ -82,7 +82,7 @@ function pulse(){
 	sleep(50);
 	rpio.pwmSetData(pin, 0);
 	if(!shouldStop){
-		pulseTimeout = setTimeout(pulse, sleepTime);
+		pulseTimeout = setTimeout(function(){pulse();}, sleepTime);
 	}
 }
 
