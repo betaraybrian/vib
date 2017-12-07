@@ -47,7 +47,7 @@ function setup(){
 
 function changePulse(newPulse){
 	bpm = newPulse
-	sleepTime = Math.round((60000 / bpm)-50);
+	sleepTime = Math.round((60000 / bpm)-80);
 }
 
 
@@ -81,7 +81,7 @@ function pulse(){
 	var data = 0;
 	var that = this;
 	rpio.pwmSetData(pin, 340);
-	sleep(50);
+	sleep(80);
 	rpio.pwmSetData(pin, 0);
 	if(!shouldStop){
 		pulseTimeout = setTimeout(function(){pulse();}, sleepTime);
