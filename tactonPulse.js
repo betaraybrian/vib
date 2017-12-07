@@ -82,7 +82,7 @@ function pulse(){
 	sleep(50);
 	rpio.pwmSetData(pin, 0);
 	if(!shouldStop){
-		pulseTimeout = setTimeout(() => { pulse(); }, sleepTime);
+		start();
 	}
 }
 
