@@ -47,7 +47,7 @@ function setup(){
 
 function changePulse(newPulse){
 	pulse = newPulse
-	sleepTime = Math.round((60000 / pulse)-50);
+	sleepTime = Math.round((60000 / bpm)-50);
 }
 
 
