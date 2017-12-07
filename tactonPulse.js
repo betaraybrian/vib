@@ -46,12 +46,13 @@ function setup(){
   
 
 function changePulse(newPulse){
-	pulse = newPulse
+	bpm = newPulse
 	sleepTime = Math.round((60000 / bpm)-50);
 }
 
 
 function start(){
+	console.log("starting sleeptime: "+sleepTime);
 	shouldStop = false;
 	rpio.open(pin, rpio.PWM);
 	rpio.pwmSetClockDivider(clockdiv);
@@ -75,14 +76,15 @@ function stop(){
 }
 
 function pulse(){
+	console.log("pulsing");
 	var direction = 1;
 	var data = 0;
-	
+	var that = this;
 	rpio.pwmSetData(pin, 340);
 	sleep(50);
 	rpio.pwmSetData(pin, 0);
 	if(!shouldStop){
-		start();
+		pulseTimeout = setTimeout(function(){pulse();}, sleepTime);
 	}
 }
 
@@ -100,4 +102,5 @@ function sleep(milliseconds){
 
 
 setup();
+changePulse(80);
 start();
