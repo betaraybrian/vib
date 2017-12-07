@@ -36,9 +36,30 @@ rpio.pwmSetRange(pin, range);
  * Repeatedly pulse from low to high and back again until times runs out.
  */
 
-        rpio.pwmSetData(pin, 444);
+        rpio.pwmSetData(pin, 625);
      
-        sleep(500);
+        sleep(15000);
 rpio.pwmSetData(pin, 0);
+sleep(5000);
+rpio.pwmSetData(pin, 525);
+     
+        sleep(15000);
+rpio.pwmSetData(pin, 0);
+sleep(5000);
+rpio.pwmSetData(pin, 550);
+     
+        sleep(15000);
+rpio.pwmSetData(pin, 0);
+sleep(5000);
+rpio.pwmSetData(pin, 575);
+     
+        sleep(15000);
+rpio.pwmSetData(pin, 0);
+sleep(5000);
+rpio.pwmSetData(pin, 600);
+     
+        sleep(15000);
+rpio.pwmSetData(pin, 0);
+
 }
 play1();

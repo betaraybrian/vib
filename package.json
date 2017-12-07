@@ -21,6 +21,7 @@
   "homepage": "https://github.com/betaraybrian/flex#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "firebase": "^4.7.0",
     "keypress": "^0.2.1",
     "mcp-spi-adc": "^1.0.0",
     "pulsesensor": "0.0.1",

@@ -197,7 +197,7 @@ function setupFirebaseListeners(){
       }
       if(snapshot.val().gesture == "stop"){
         console.log("stop tacton here ");
-      /playStop();
+      playStop();
       }
     }
   });
