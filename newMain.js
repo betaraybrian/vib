@@ -172,15 +172,20 @@ function playTacton(isReplay){
 
 function setup(){
   console.log("Starting firebase setup");
-  let config = {
-    apiKey: "AIzaSyADmzdnO0lNOONCJ2nL9SPN2JB9OtJb8Y0",
-    authDomain: "multimodal-2f37a.firebaseapp.com",
-    databaseURL: "https://multimodal-2f37a.firebaseio.com",
-    projectId: "multimodal-2f37a",
-    storageBucket: "multimodal-2f37a.appspot.com",
-    messagingSenderId: "23867613841"
-  };
-  firebase.initializeApp(config);
+  if (firebase.apps.length){
+    firebase.app();
+  }else{
+    let config = {
+      apiKey: "AIzaSyADmzdnO0lNOONCJ2nL9SPN2JB9OtJb8Y0",
+      authDomain: "multimodal-2f37a.firebaseapp.com",
+      databaseURL: "https://multimodal-2f37a.firebaseio.com",
+      projectId: "multimodal-2f37a",
+      storageBucket: "multimodal-2f37a.appspot.com",
+      messagingSenderId: "23867613841"
+    };
+    firebase.initializeApp(config);
+  }
+  
   setupFirebaseListeners();
 }
 

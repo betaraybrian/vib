@@ -1,4 +1,4 @@
-var rpio = require('rpio');
+//var rpio = require('rpio');
 var firebase = require('firebase');
 
 var pin = 12;           /* P12/GPIO18 */
