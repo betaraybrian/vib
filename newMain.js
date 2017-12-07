@@ -1,5 +1,6 @@
 var firebase = require("firebase");
 var keypress = require('keypress');
+var tactonPulse = require('./tactonPulse');
 
 var t5 = require('./tacton5');
 
@@ -193,11 +194,15 @@ function setupFirebaseListeners(){
     if(snapshot.val()){
       if(snapshot.val().gesture == "start"){
         console.log("start tacton here ");
+        tactonPulse.stopPulse();
         playStart();
+        tactonPulse.startPulse();
       }
       if(snapshot.val().gesture == "stop"){
         console.log("stop tacton here ");
-      playStop();
+        tactonPulse.stopPulse();
+        playStop();
+        tactonPulse.startPulse();
       }
     }
   });
